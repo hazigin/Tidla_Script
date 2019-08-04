@@ -1,0 +1,12 @@
+setcps(180/60/4)
+d1 $ stack [ s "bd bd bd bd" #gain "1.1", s "[~ hh ~ hh]*4" # gain "0.7" ,s "[808bd 808:4] * 4" #gain "0.6"]
+d2 $ n "c'maj" # s "superhoover" #gain "0.5"
+d3 $ octave 3 # s "superhex" #gain "0.6"
+d4 $ n "<c af f ef>" # s "superstatic"
+hush
+
+--d3 $ n "[e4,g4,b4]*4" # s "arp" #gain "0.6" #sustain "0.7" #accelerate sine
+--d5 $ octave 3 # s "superhex" #gain "0.6"
+--d7 $ n (arp "diverge converge" "<a'm9'8 e'7sus4'8>")
+----  # sound "superstatic"
+----  # sustain 0.5

@@ -1,0 +1,40 @@
+setcps(185/60/4)
+d1 $ stack [ s "bd bd bd bd" #gain "1.1", s "[~ hh ~ hh]*4" # gain "0.7",s "808cy * 8" #gain "0.4"]
+
+d2 $ n(arp "<pikyup down up>" "d'minor7 g'minor7 b'major7")
+    # s "supercomparator" #sustain "0.3" #gain "0.5"
+    # hpf "1500"
+
+d3 $ n "[e4,g4,b4]*4" # s "arp" #gain "0.6" #sustain "0.7" #accelerate sine
+
+d4 $ n "<gs b a df>" # s "superpwm" #gain "0.5"
+    #sustain "1.5"
+    #room "1.4"
+    #voice "1.4" #delay "1.1"
+    #hpf "500"
+
+d5 $ n "<c af f ef>" # s "superstatic"  #sustain "1.5"
+
+d6 $ n(arp "<pikyup down up>" "c'minor e'minor g'major")
+    # s "supervibe"
+    # gain "0.5"
+    # room "1"
+    # lpf "1000"
+
+d7 $ octave 3 # s "superhex" #gain "0.7" # room "0.3"
+
+d8 $ stack [s "ades3 * 4",s "ades2 * 8"] #gain "0.9" #room "1"
+
+d9 $ n "[e4,g4,b4]*4" # s "arp" #gain "0.8" #sustain "0.7" #accelerate sine
+
+solo 9
+
+hush
+
+--<(__)>
+
+--d3 $ n "[e4,g4,b4]*4" # s "arp" #gain "0.6" #sustain "0.7" #accelerate sine
+--d5 $ octave 3 # s "superhex" #gain "0.6"
+--d7 $ n (arp "diverge converge" "<a'm9'8 e'7sus4'8>")
+----  # sound "superstatic"
+----  # sustain 0.5

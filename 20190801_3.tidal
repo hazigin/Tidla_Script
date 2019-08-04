@@ -1,0 +1,3 @@
+d1 $ n "[c5,g5]" # s "supergrind" # lpf (range 500 2000 $sine) #pan sine
+d2 $ cat[s "numbers:3", s "numbers:2",s"numbers:1"]
+hush
