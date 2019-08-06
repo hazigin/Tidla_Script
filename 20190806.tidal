@@ -1,0 +1,22 @@
+let  x speedAmount p = rev $ (|* speed speedAmount ) $ p
+-- speedAmount= 1.5 ,P = s "arpy*8" # n (run 8)
+d1 $ x 1.5 $ s "arpy*8" # n (run 8)
+d1 silence
+
+let gtfo = (# gain 1)
+    g = gtfo
+d2 $ stack [
+  g $ s "bd*16?"
+  ,s "~ cp"
+  , s "hh*8?"
+]
+
+let gtfo = (const $ s "~")
+    g = gtfo
+d2 $ stack [
+  g $ s "bd*16?"
+  ,s "~ cp"
+  , s "hh*8?"
+]
+
+hush
