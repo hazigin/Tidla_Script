@@ -1,0 +1,14 @@
+do
+    let rip a b p = within (0.25, 0.75) (slow 2 . rev . stut 8 a b) $ p
+    d1 $ rip 0.8 0.1 $ s "bd*8? cp(3,8)"
+    d2 $ within (0, 0.5)(fast 2) $ sound "bd*2 sn lt mt hh hh hh hh"
+    d3 $ within (0.75, 1) (# speed "0.1") $ sound "bd*2 sn lt mt hh hh hh hh"
+    let spike p = ((# delaytime (range 0.001 0.3 $ slow 7.1 sine)) . (# delayfeedback (range 0.7 0.99 $ slow 6.71 sine))) $ p
+    let haziptn a b p = within (a, b) (#speed "0.5") $ p
+    d4 $ haziptn 0.5 1 $ s "bd*2 sn lt mt hh hh hh hh"
+    d5 $ fast "2 1".stut 8 1 1 $ s "bd sn kurt cp"
+    d6 $ stut 4 0.5 0.1 $ s "bd sn cp"
+    d7 $ spike $ s "arpy*8"
+    d8 $ slow 4 $ chop 3 $ s "numbers:0 numbers:1 numbers:2 numbers:3"
+    
+hush
