@@ -1,0 +1,14 @@
+setcps "180/60/4"
+
+do
+  d1 $ stack["bd:3!4","hh*8","sf:1 * 4"]
+  d2 $ rev $n "c5 e5" # s "supersaw" # gain "0.8" #room "0.5"
+  d3 $ n "[e5,g5,d4]" # s "superprimes" # gain "0.6" # d
+  d4 $ s "arpy * 8" # pan sine # linder "0.25"
+  d5 $ s "supertron" # octave 3 # accelerate "0.2" # gain "0.8"
+  d7 $ s "superprimes" # octave 4 #pan sine
+  d6 $ s "industrial"
+  d8 $ s "industrial:2*8"
+
+hush
+  

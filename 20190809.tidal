@@ -1,0 +1,6 @@
+do
+  d1 $ n(run"<1 2 3 4 5 6 7 8 9 10>") # s "yeah" |+| speed (1)
+  d2 $ s "xmas:0"
+  d3 $ jux (iter 4) $ sound "arpy arpy:2*2"
+    |+| speed (range 1 1.5 sine)
+hush
