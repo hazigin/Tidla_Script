@@ -1,0 +1,5 @@
+do
+  d1 $ every 2 (#room "1.2") $ "[bd sn hh]!4"
+  d2 $ octave 3 # s "superprimes" # accelerate cosine # room "1.1"
+  d3 $ n "c3" # s "superpiano"
+  d1 silence
