@@ -1,5 +1,11 @@
 do
-  d1 $ every 2 (#room "1.2") $ "[bd sn hh]!4"
-  d2 $ octave 3 # s "superprimes" # accelerate cosine # room "1.1"
-  d3 $ n "c3" # s "superpiano"
-  d1 silence
+ d1 $ every 2 (#room "1.2") $ "[bd sn hh]!4"
+ d2 $ s "808bd!4" -- 緩衝材としてw
+ d3 $ n "c3" # s "superpiano" # gain "1.1"
+ d4 $ octave 3 # s "superprimes" # accelerate sine # room "1.1"
+ d5 $ octave 1 # s "supernoise" # gain "0.7"
+ d6 $ s "arpy:5*4" # sustain "1.5" #delay "1.2" #gain "0.5"
+
+ d3 silence
+ hush
+ -- Thanks <(__)>
