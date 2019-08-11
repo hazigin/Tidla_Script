@@ -1,0 +1,10 @@
+setcps(185/60/4)
+do
+  d1 $ stack[s "808bd:2!4 ~",s "~ 808sd:1!4",s "808hh *8"]
+  d2 $ n "d4 g4 b4 c4" # s "arpy:2" # delay "1.2" #gain "0.8"
+  d3 $ octave 3 # s "supernoise" # room "1.1" # accelerate "1.1"
+  d4 $ n "[e4,g4]" # s "superhammond" # room "0.6"
+  d3 silence
+  d3 $ n "g4 b4" # s "superhammond" # room "0.6"
+  d4 silence
+  d5 $ octave 4 # s "supertron" #room "1.1"
