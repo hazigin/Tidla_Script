@@ -1,0 +1,10 @@
+setcps(135/60/4)
+
+do
+  d1 $ stack[s "909!4" ,s "808sd:3!8" #gain "0.7"]
+  d2 $ s "superprimes" # octave 5 # room "0.9" #gain "0.6"
+  d3 $ n "[c4,e5,g4] [g4,b4,d4]" #s "superprimes" #gain "0.6" #accelerate sine
+  d4 $ n (arp "<pinkyup up down>" "<f'maj7 g'min7 c'min7>") # s "arpy:2" # gain "0.7"
+  d5 $ n (arp "<down>" "c'maj7") # octave 3 # s "supersquare" #gain "0.6"  # room "0.4" #accelerate "0.4"
+
+hush
