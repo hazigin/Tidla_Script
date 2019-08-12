@@ -1,0 +1,16 @@
+setcps(200/60/4)
+do
+  d1 $ stack[s "909!4",s "[~ hh]!4",s "[[808oh 808oh] ~]!4"]
+  d2 $ every 3 rev $ n "c4 f4 a4" # s "newnotes:1 newnotes:1" # room sine  #pan cosine #shape "0.5"
+  let cord = "c'maj7 f'min c'maj g'maj7 e'min f'min"
+  let patn = "<pikyup down>"
+  let patn2 = "<down>"
+  d3 $ n (arp patn cord) #octave 6 # s "arpy" #gain "0.8" #pan sine
+  d4 $ n (arp patn2 cord) #octave 3 # s "arpy" #gain "0.6"
+  d5 $ n (arp "<up>" "c'min7 e'min7") #octave 7 # s "superhammond" #lpf 3000 #gain "0.7"
+  d6 $ octave 4 # s "superhex" #room "0.8" #gain "0.7" #shape "0.5"
+  solo 1
+  d5 silence
+hush
+
+--<(__)>--
