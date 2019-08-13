@@ -1,0 +1,12 @@
+setcps(120/60/4)
+
+do
+  d1 $ stack[s "808bd:8!4",s "can:1",s "[~ bend:3]",s "sine:0" #gain "0.4"]
+  d2 $ every 2 rev $s "glasstap:3*2 noise2:5 rm:2 rm:4*2"
+  d3 $ every 3 rev $ s "mp3:2*3 tabla:3 tech:5*2 voodoo:3*2"
+  d4 $ sine # octave 4 # s "supersaw" #gain "0.5" #pan rand #accelerate cosine
+  d5 $ whenmod 4 3 (#accelerate "0.5") $s "glitch:5 feel:4*2 less:3*3 stomp:1*2"
+  d6 $ octave 3 # s "supersquare" #gain "0.8" #room "0.8" #leslie sine
+  hush
+
+--<(__)>--
