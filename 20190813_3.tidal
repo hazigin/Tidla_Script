@@ -1,0 +1,14 @@
+setcps(155/60/4)
+
+do
+  d1 $ stack[s "808bd:6!4",s "[808oh*2 ~]!4" #gain "0.7",s "[~808sd]!4"]
+  d2 $ s "superreese" #octave 4 #room "0.7" #gain "0.7"  #shape "0.6"
+  d3 $ n (arp "<down up>" "e'maj g'min") #octave 3 #s "arpy:3" #room "0.6" #gain "0.7"
+  d4 $ n (arp "<pinkyup up>" "e'maj g'min7 ") #s "supertron" #octave 5 #lpf 3000 #room "0.6" #gain "0.6"
+  d5 $ s "[bottle:5*2]industrial:12[bottle:4*2]industrial:10" #gain "0.7" #room "0.5" #accelerate sine
+  d6 $ s "superhex" #octave 5 #size sine #gain "0.7" #shape sine #accelerate sine
+  d6 silence
+
+hush
+
+-- <(__)> --
