@@ -1,0 +1,19 @@
+setcps(140/60/4)
+
+do
+  d1 $ stack [s "909!4",s "hh!8",s "[bin bend:2]!4" #gain "0.7"]
+  d2 $ n (arp "<down down>" "c'maj f'min")
+          #octave 3 # s "superprimes" #gain "0.7"
+  d3 $ n (arp "<pinkup up>" "e'min7 f'min") #octave 4 # s "tink:8"
+  d4 $ jux(#room "0.6") $ stack [s "[glasstap:2*2]noise2[techno:2*2]tok" #gain "0.8",
+            s "bin*2 can:2 ~ ~"]
+  d5 $ octave 3 # s "superhex" #gain "0.7" #room "0.6"
+  d6 $ octave 3 # s "superhat" #accelerate "0.3" #gain "0.7"
+  d7 $ s "808bd!4" #room "0.7"
+  d8 $ octave 4 # s "supersiren" #accelerate "0.7" #gain "0.8" #pan sine
+
+  solo 8
+
+hush
+
+--<(__)>
