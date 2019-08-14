@@ -1,0 +1,17 @@
+setcps(140/60/4)
+
+do
+  d1 $ stack [s "909!4",s "hh!8",s "hc"]
+  d2 $ n (arp "<pinkup up>" "c'maj e'min" ) #octave 3
+          # s "supersaw" #gain "0.8" #room "0.6"
+  d3 $ every 2 rev $ s "can:4 flick cp bin:8" # gain "0.8"
+  d4 $ n (arp "<pinkup>" "[e'min7]") #octave 4
+            # s "superprimes" #gain "0.7" #room "0.3"
+  d5 $ n "c'min7" #octave 3 #s "superhex" #gain "0.7"
+  d6 $ s "metal:8!4"
+  d7 $ s "invaders:4"
+  d7 silence
+  solo 2
+hush
+
+--<(__)>
