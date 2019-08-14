@@ -1,0 +1,19 @@
+setcps(140/60/4)
+
+do
+  d1 $ stack [s "bd:4 sn:4 [bd:4 bd:4] sn:4",
+        s "hh!8" #gain "0.7",
+        s "drumtraks*4" # gain "0.7"]
+  d2 $ s "hc" #room "0.6" #gain "0.5"
+  d3 $ s "miniyeah!4"
+  d4 $ jux(#gain "0.7") $ s "[can:4*2]voodoo[mouth*2]e"
+  d5 $ s "bin:2 can:4 bend:4*2 incoming" #pan rand
+  d6 $ s "~ ~ noise2:2*2 noise:4*2" #gain "0.7" #shape "0.7"
+  d7 $ n (arp "<pinkup down up>" "c'maj f'min e'min")
+        #octave 2 # s "supersaw" #gain "0.5" #shape "0.7"
+  d8 $ octave 4 # s "supersnare" #shape "0.8" #gain "0.7" #accelerate "0.2"
+  d7 silence
+
+hush
+
+--<(__)>
