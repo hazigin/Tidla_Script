@@ -1,0 +1,18 @@
+setcps (160/60/4)
+
+do
+  d1 $ stack [s "808bd:2!4", s "hh*8", s "[~ 808sd:3]!4"]
+  d2 $ n (arp "<down>" "c'maj e'mim") # octave 3 # s "supersaw"
+        # room "0.6" #gain "0.8"
+  d3 $ s "hc" # room "0.8" #gain "0.8"
+  d4 $ every 2 rev $ stack [s "bin can:4*5" ,s "~ cp",
+                          s "[noise [bottle*2]]*2",
+                          s "glasstap:2!8"]
+  d5 $ n (arp "<pinkup up>" "<a'maj g'min7>")
+        #octave 5 # s "superhammond" #gain "0.6" #shape "0.5"
+  d6 $ octave 4 # s "supernoise" # gain "0.7" #room "0.4" #accelerate "0.5"
+  d7 $ octave 5 # s "supersiren" # gain "0.8" #accelerate "0.7"
+  solo 7
+hush
+
+--<(__)>
