@@ -1,0 +1,15 @@
+setcps (150/60/4)
+
+do
+  d1 $ stack [s "909!4",s "hh:4*8" #gain "0.8"] #accelerate "0.7"
+  d2 $ every 2 rev $ whenmod 4 2 (#room "0.4") $ s "bin can bubble:1 bend:1"
+  d3 $ n "c2 c2" #octave 2 # s "super808" #gain "0.8" #accelerate "0.5"
+  d4 $ jux(# room "0.5") $ n (arp "<pinkup down>" "<e'min7 a'min>")
+            # s "superhammond" #octave 3  #gain "0.7" #shape "0.5"
+  d5 $ octave 4 # s "superhex" #accelerate "0.4" #gain "0.7"
+  d6 $ n (arp "<pinkup up down up>" "<e'min g'maj e'min g'maj>") # s "supersaw" #gain "0.7" #accelerate "0.5"
+  d7 $ every 2 rev $ s "[glasstap:4 glasstap:2 glasstap:8 glasstap:7]*4" #gain "0.8" #shape "0.3"
+
+  solo 6
+hush
+--<(__)>--
