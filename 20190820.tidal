@@ -1,0 +1,19 @@
+setcps(160/60/4)
+
+do
+  d1 $ stack[s "909!4",s"hh!8" #gain "0.8"]
+  d2 $ every 3 rev $ s "hh [cp,sd:4] [mt metal:2]*2"
+  d2 silence
+  d3 $ octave 6 # s "superprimes"
+      #gain "0.5" #accelerate (slow 4 $ segment 16 $ range 0 16 $sine)
+  d3 silence
+  d4 $ jux(#accelerate (slow 4 $ segment 16 $ range 0 16 $sine))
+        $ n(arp "<pinkup up>" "c'maj f'maj" )
+        # s "superhammond" # gain "0.7"
+  d4 silence
+  d5 $ octave 5 # s "supernoise"
+        #hpf (slow 2 $ segment 16 $ range 0 16 sine * 1000)
+        #accelerate (slow 4 $ segment 8 $ range 0 8 $cosine)
+
+hush
+--<(__)>
