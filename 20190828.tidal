@@ -1,0 +1,19 @@
+setcps(140/60/4)
+
+do
+  d1 $ stack["909!4","hh!8" #gain"0.8","~~[808bd:4*2]~"]
+  d2 $ n(arp "<up down>" "c'maj e'min")
+      #octave 2 # s "superchip" #gain"0.5" #room "1.1" #delay "0.6"
+  d3 $ n(arp "pinkup pinkup" "e'min e'min7")
+      #octave 4 # s "superprimes" #gain"0.5" #room "0.6" #orbit 1
+  d4 $ stack["~[sd:7*2]~~" #accelerate "0.5",
+        "~~~808cy" #gain "0.7",
+        "cp!4" #gain"0.7"]
+  d5 $ octave  4 # s "supertron" #gain "0.6" #room "0.8"
+  d6 $ "[bass1:2*2]bass1:2" #gain "0.7"
+  d7 $ n("[c4,e4,g4]!2") # s "superpiano" #gain "0.6" #shape "0.5"
+
+  solo 7
+
+  hush
+--<(__)>
