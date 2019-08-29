@@ -1,0 +1,16 @@
+setcps(150/60/4)
+do
+  d1 $ s "808bd:4!4" # accelerate "0.8" #lpf "1000"
+  d2 $ s "sd:8!8~~~~" #gain "0.9" #hpf "1000" #hresonance "0.1 0.2 0.3 .0.4"
+  d3 $ whenmod 4 2 rev $ s "hh hh sine:1 sine:1" #crush "<16 4 8 16>" #orbit 2
+  d4 $ octave 5 # s "supersiren"
+        #gain "0.7" # hpf (1000 * sine)
+        #accelerate (cosine*0.2) #size "1"
+  d5 $ every 4 rev $ s "bass:5 bass:4*2 bass:5 bass:4*2" #lpf "800"
+  d6 $ octave 7 # s "glasstap:1 glasstap:3 glasstap:4 glasstap:7"
+        #gain "2" #room "1" #hpf "1000" #orbit 1
+  d7 $octave 3 # s "superhex" #gain "0.6" #room "0.8"
+
+  solo 6
+  hush
+--<(__)>
