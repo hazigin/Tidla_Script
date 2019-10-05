@@ -1,0 +1,18 @@
+setcps(145/60/4)
+do
+  d1 $ octave 3 # s "superhex" #gain "0.6" #room "0.5"
+  d2 $ stack [s "808bd!4" ,s "808ht1!8"] #room "0.3"
+  let cord = "c'maj7 f'min7 "
+  let patn = "<down down>"
+  d3 $ n (arp patn cord)
+    # s "supertron" # gain 0.5
+    # pan sine # sustain "0.5"
+    # accelerate cosine
+    # room "0.7"
+    # lpf (range 800 2900 $sine)
+  d4 $ s "glasstap:3 sequential:5 glich:2 jvbass:1" #gain "0.7" # room "0.6"
+  let cord2 = "[c6,e5,g5]"
+  d5 $ n cord2 # s "superpwn" #accelerate sine #gain "0.5" #pan sine #room "0.8"
+  d6 $ octave 4 # s "supersiren" #gain "0.7" #accelerate cosine #pan sine #room "0.5"
+
+  hush

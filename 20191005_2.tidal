@@ -1,0 +1,18 @@
+setcps(150/60/4)
+
+do
+  let cord = ""
+  let patn = ""
+  d1 $ octave 5 # s "supersiren" #gain "0.6" # room "0.7" #pan sine
+  d2 $ stack[s "hh:5!8" #gain "0.6" #room "0.5",s "sd!2"]
+  d3 $ n "[c3,e3,g3]" #s "superpiano" #gain "0.6" #room "0.4"
+  d4 $ octave 4 # s "superhoover" #gain "0.7" # room "0.6" #sustain "0.3"
+  d5 $ n (scan 8) # s "glasstap:5 industrial:5 flick:4 future:10" #gain "0.8" #room "0.5"
+  d6 $ n "b5" # s "superhammond"
+    #gain "0.8" #room "0.8"
+    #accelerate sine #lpf (range 1500 3000 $cosine)
+    #pan cosine
+  solo 3
+  hush
+--<(__)>--
+乙
