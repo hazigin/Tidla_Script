@@ -1,0 +1,23 @@
+setcps(155/60/4)
+
+do
+  let code1 = "<b c e f>"
+  d1 $  n code1 # s "superstatic"  #sustain "2" #pan sine
+
+  let ptn1 = "[e5,g6,b5,c3]!4"
+  let gain_2 = "0.6"
+  d2 $  n ptn1 # s "superhoover" #gain gain_2 #room "0.3"
+
+  d3 $ stack[s "808sd!4" #gain "0.7" #accelerate "0.3",
+      s "bd:8!4" #gain "0.7", s "hh!8" #gain "0.9"]
+  d4 $ n "c3 e2 a2 b3" #s "jvbass:4" #gain "0.8" #room "0.5"
+
+  d5 $ stack[s "glasstap:2!2", s "space:3"
+        #gain "0.5", s "sine:2" #gain "0.8"]
+  d6 $ octave 4 # s "supersiren"
+          #gain "0.7" # room "0.7"
+          #pan cosine #accelerate "0.8"
+  solo 6
+-ありでした<(__)>
+
+hush

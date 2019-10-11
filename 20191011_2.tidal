@@ -1,0 +1,21 @@
+setcps(140/60/4)
+
+do
+  d1 $ stack[s "glasstap:5!2",s " ~ oc:4 ~ oc:4"]
+  let ptn2 =  "[c3 f3 a3 g3]"
+  d2 $ n ptn2 # s "made:1!4" #gain "0.7" #room "0.5"
+  d3 $ stack[s "moog:1!4" #gain "0.7" #sustain "0.5",s "wind:3"]
+  let ptn4 = "<pinkup down up>"
+  let code4 = "c'minor7 f'majar7"
+  d4 $ n (arp ptn4 code4)
+        # s "superhoover" #gain "0.5" # room "0.4"
+        # accelerate "0.3"
+  let pianoptn = "[c4,e4,g5]!4"
+  d5 $ n pianoptn #s "superpiano"
+        #gain "0.5" #room "0.2" #accelerate "0.8"
+  d6 $ stack[s "sd:5!4" #gain "0.6" #room "0.8",s "808cy:8"]
+  d1 silence
+  d1 $ s "supersiren" # accelerate "0.6" #room "0.7" #gain "0.1" #pan sine
+  solo 1
+  hu
+--ありでした<(__)>
