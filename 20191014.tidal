@@ -1,0 +1,11 @@
+--途中までかもですが
+setcps(140/60/4)
+
+do
+  let code1 = ""
+  let ptn1 = ""
+  d1 $ s "industrial" #gain "0.7" # room "0.7"
+  d2 $ s "~~[glasstap:4]" #gain "0.8" # room sine
+  d3 $
+
+  hush
