@@ -1,0 +1,19 @@
+setcps(100/60/4)
+
+do
+  d1 $ n "c5" # s "supergong" #hpf "2000" #room "0.7"
+  d2 $ stack[s "~~[bd:1!2]~",s "808sd:7!8",s "~~~[808ht:3!2]"]
+  let code = "c'maj7 g'min a'maj7 f'maj"
+  let ptn = "<pinkup down pinkup pinkdown>"
+  d3 $ n (arp ptn code) #octave 3
+      # s "bass:7" #gain "0.9"
+      # room "0.6"
+  d4 $ octave 3 # s "supersiren" #gain "0.8"
+      #accelerate cosine #pan sine
+      #room "0.8" #hpf "1100"
+  d5 $ stack[s "[hh glitch:4]!4" #gain "1",s "[~[ades4*2]]*4" #gain "0.9"] #room "0.8"
+  d6 $ n"[c6,e6,g6]!4" #s "superhex" # gain "0.6" #room "0.5"
+  hush
+
+--<(__)>--
+--乙でした

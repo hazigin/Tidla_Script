@@ -1,0 +1,15 @@
+setcps(140/60/4)
+
+do
+  let code = "e'maj7 g'min"
+  let ptn = "<pinkup pinkdown>"
+  d1 $ n(arp ptn code) # s "bass:3" #gain "0.9"
+  d2 $ stack[s "hh:5!8",s "glasstap:8!4",s "808cy:8!2"] #room "0.7"
+  d3 $ n "b6 c7" # s "superhex" #room "0.8" #gain "0.8"
+  d4 $ s "less:3!4" #gain "0.7" #room "0.7"
+  d5 $ stack[s "moog:4" #gain "0.8" #room "0.7",s "stab:14!2" #gain "0.9" #room "0.4"]
+  d6 $ stack[s "space:2",s "metal:2!2","~[industrial:20]"]
+
+  hush
+
+--<(__)> 乙でした
